@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("enter a number :");
+      let counts = new Array(10).fill(0);
+      for (let i = 0; i < input.length; i++) {
+        let digit = parseInt(input[i], 10); 
+        counts[digit]++;
+      }
+      (uni = ""), (dup = "");
+      for (let i = 0; i < counts.length; i++) {
+        if (counts[i] === 1) {
+          uni += counts[i] + " ";
+        } else if (counts[i] > 1) {
+          dup += counts[i] + " ";
+        }
+      }
+      console.log("Uniques:", uni);
+      console.log("Duplicates:", dup);
+    </script>
+  </body>
+</html>
